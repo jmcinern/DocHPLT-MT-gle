@@ -1,0 +1,3 @@
+# Converted HF models and staging dirs are large + reproducible via setup_models.py
+converted/
+_marian_src/
