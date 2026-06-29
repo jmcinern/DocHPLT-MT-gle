@@ -6,12 +6,18 @@ The English Irish paired document subsection of the HPLT corpus. No document lev
 
 Link: https://huggingface.co/datasets/HPLT/DocHPLT/viewer/en-ga/
 
-## Baseline
+
+## Model1: Baseline
 
 - MarianMT format V2 model: https://huggingface.co/HPLT/translate-en-ga-v2.0-hplt
-- Will have to convert to hf/pytorch I think
+- Converted to HF compatible format: models/converted/en-ga-hplt-hf
 
-## Evalutation
+## Model2: Longer Context
+- T5 Model?
+- Tokenizer?
+
+
+## Evaluation
 
 - The Dolly-15K instruction tuning dataset, translaetd by Gemini 2.5 Pro. Local Path: D:\VS-code-projects\droughts\LoRA_Ga\LoRA_Ga\Dolly_15K_En_Ga.jsonl
 -- Each line has an instruction and response pair in English and the translated Irish
