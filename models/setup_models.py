@@ -1,13 +1,12 @@
-"""Agent 1 (Models) — download HPLT Marian models, convert to HuggingFace
-MarianMTModel format, store them, and sanity-check a translation.
+"""Agent 1 (Models) — download the HPLT en->ga Marian model, convert it to
+HuggingFace MarianMTModel format, store it, and sanity-check a translation.
 
-HPLT publishes en->ga and ga->en as raw Marian binaries (.npz + .spm + .vocab)
-and does NOT ship the decoder.yml / vocab.yml that HF's converter expects, so we
+HPLT publishes the model as raw Marian binaries (.npz + .spm + .vocab) and does
+NOT ship the decoder.yml / vocab.yml that HF's converter expects, so we
 synthesise those from the npz config and the .vocab file before converting.
 
 Usage:
-    python models/setup_models.py            # both models
-    python models/setup_models.py en-ga      # one model
+    python models/setup_models.py
 """
 
 import sys
@@ -36,12 +35,6 @@ MODELS = {
         "spm": "model.en-ga.spm",
         "vocab": "model.en-ga.vocab",
         "test_src": "Translate this sentence into Irish, please.",
-    },
-    "ga-en": {
-        "repo": "HPLT/translate-ga-en-v2.0-hplt",
-        "spm": "model.ga-en.spm",
-        "vocab": "model.ga-en.vocab",
-        "test_src": "Aistrigh an abairt seo go Béarla, le do thoil.",
     },
 }
 
